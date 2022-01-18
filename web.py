@@ -1,12 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template, request, flash
 app = Flask(__name__)
 
 @app.route('/')
 def index():
- return 'hello, Robs Pipeline'
+ return render_template("index.html")
 
-
-import turtle
-wn=turtle.Screen()
-wn.bgcolor("purple")
-wn.title("This is my screen title!")
